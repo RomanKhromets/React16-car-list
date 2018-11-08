@@ -1,7 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import './index.css';
-import App from './components/App';
-// import * as serviceWorker from './serviceWorker';
+import { BrowserRouter as Router,Route,Switch } from 'react-router-dom';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import App from './components/App';
+import MarkedList from './components/MarkedList';
+
+import './index.css';
+
+ReactDOM.render(
+<Router>
+	<Switch>
+		<Route exact path="/" component={App} />
+		<Route exact path="/marked_list" component={MarkedList} />
+	</Switch>
+</Router> , 
+document.getElementById('root'));

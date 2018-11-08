@@ -13,12 +13,12 @@ export default class CarList extends PureComponent {
 				<Car car = {car}
 					isOpen = {this.state.openCarId === car.id}
 					onButtonClick = {this.handleClick.bind(this, car.id)}
-				/>								
+				/>
 			</li>
 		)
 														
 		return (
-			<ul className = "list-group list-group-flush "> {carElements}	</ul>	
+				<ul className = "list-group list-group-flush "> {carElements}	</ul>	
 		)
 	}
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import CarList from './CarList';
+import MarkedButton from './MarkedButton';
 
 import cars from '../fixtures';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -12,6 +13,7 @@ class App extends Component {
 				<h1>App cars list:</h1>
 				<br/>
 				<CarList cars = {cars} />
+				<MarkedButton/>
       </div>
     );
   } 

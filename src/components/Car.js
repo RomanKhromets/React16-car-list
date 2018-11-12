@@ -2,17 +2,17 @@ import React, { PureComponent } from 'react';
 
 import markedCars from '../markedCarsArr';
 
-
 class Car extends PureComponent {
 	constructor(props) {
     super(props)
     this.state = {isMarked: null}
 		this.pressMark = this.pressMark.bind(this)
   }
-	pressMark(){
+  
+	pressMark() {
 		let {car} = this.props
-		this.setState({isMarked : buttMark()})
-		
+		this.setState({isMarked : buttMark()});
+		this.props.setIsMarked(true);
 		function isItemInArr(){
 			return markedCars.some( function(val,ind,arr){ return markedCars[ind].id === car.id } );
 		}
@@ -32,12 +32,11 @@ class Car extends PureComponent {
 					</ul>
 		const markBut = <button className = "btn btn-sm btn-secondary float-right"
 															onClick = {this.pressMark} >
-												mark
-											</button>
+											mark
+										</button>
 		const doneBut = <button className = "btn btn-sm btn-danger float-right" >
 												done
 										</button>
-
 		return (
 			<div>	
 				<h4>

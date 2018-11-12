@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
 
 import CarList from './CarList';
-import MarkedButton from './MarkedButton';
 
 import cars from '../fixtures';
 import 'bootstrap/dist/css/bootstrap.css';
 
 class App extends Component {
-  render() {
+	 render() {
     return (
       <div className="container">
-				<h1>App cars list:</h1>
+				<h1 className='display-3'>List of cars</h1>
 				<br/>
 				<CarList cars = {cars} />
-				<MarkedButton/>
       </div>
     );
   } 
